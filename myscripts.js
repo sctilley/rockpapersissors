@@ -27,6 +27,7 @@ function playRound(playerSelect, computerSelect){
     console.log("player choice: " + playerSelect + " type: " + typeof(playerSelect));
     if (computerSelect === playerSelect){
         roundWinner = 'tie'
+        console.log("Tied it up buddy")
     }
 
     if (
@@ -37,7 +38,11 @@ function playRound(playerSelect, computerSelect){
         playerScore ++
         roundWinner = 'player'
     }
-    else {
+    if (
+        computerSelect === 'ROCK' && playerSelect === 'SCISSORS' ||
+        computerSelect === 'SCISSORS' && playerSelect === 'PAPER' ||
+        computerSelect === 'PAPER' && playerSelect === 'ROCK'
+    ){
         computerScore ++
         roundWinner = 'computer'
     }
