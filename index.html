@@ -4,10 +4,46 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <script src="myscripts.js"></script> 
+    <title>Rock Paper Sissors</title>
+    <link rel="stylesheet" href="./style.css">
+
 </head>
 <body>
-    Javascript test 
+  <header class="header">
+    <h1>Lets play Rock, Paper, Sissors</h1>
+  </header>
+  <div class="main">
+    <div class="scoreboard">
+      <h2 class="score-info" id="scoreInfo">Choose your weapon</h2>
+      <h3 class="score-message" id="scoreMessage">First to score 5 points wins</h3>
+      <div class="score-container">
+        <div class="score-box">
+          <div class="sign" id="playerSign">?</div>
+          <p class="score" id="playerScore">player: 0</p>
+        </div>
+        <div class="score-box">
+          <div class="sign" id="computerSign">?</div>
+          <p class="score" id="computerScore">Computer: 0</p>
+        </div>  
+      </div>
+    </div>
+    <div class="buttons">
+      <button class="btn btn-square" id="rockBtn">
+        <div>rock</div>
+      </button>
+      <button class="btn btn-square" id="paperBtn">
+        <div>paper</div>
+      </button>
+      <button class="btn btn-square" id="scissorsBtn">
+        <div>scissors</div>
+      </button>
+    </div>
+  </div>
+  <div class="modal" id="endgameModal">
+    <p class="modal-title" id="endgameMsg"></p>
+    <button class="btn btn-restart" id="restartBtn">Restart</button>
+  </div>
+  <div class="overlay" id="overlay"></div>
+  <script src="myscripts.js"></script> 
 </body>
 </html>
